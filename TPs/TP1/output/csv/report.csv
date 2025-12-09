@@ -1,0 +1,4 @@
+"URL de la page" "Statut HTTP" "Taille en octets" "Temps de réponse"
+http://quotes.toscrape.com/page/1 200 11064 0.3080759048461914
+http://quotes.toscrape.com/page/2 200 13745 0.41335320472717285
+http://quotes.toscrape.com/page/3 200 10029 0.330657958984375
