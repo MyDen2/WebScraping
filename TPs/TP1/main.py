@@ -45,10 +45,11 @@ def fetch_page(url, timeout=10):
 def main():
     data = []
     for i in range(1,4):
-        delay = time.time()
+        start_time = time.time()
         url = f"{BASE_URL}/page/{i}"
         result = fetch_page(url)
-        delay = time.time() - delay
+        delay = time.time() - start_time
+        # response_time = response.elapsed.total_seconds()
         html = result[0]
         status = result[1]
         size = result[2]
@@ -82,3 +83,4 @@ def create_html_page(page_name, html):
 
 if __name__ == '__main__':
     main()
+
