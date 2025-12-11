@@ -1,4 +1,4 @@
-# Scrapy settings for demo21_scrapy project
+# Scrapy settings for ecommerce_scraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,16 +7,16 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "demo21_scrapy"
+BOT_NAME = "ecommerce_scraper"
 
-SPIDER_MODULES = ["demo21_scrapy.spiders"]
-NEWSPIDER_MODULE = "demo21_scrapy.spiders"
+SPIDER_MODULES = ["ecommerce_scraper.spiders"]
+NEWSPIDER_MODULE = "ecommerce_scraper.spiders"
 
 ADDONS = {}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "demo21_scrapy (+http://www.yourdomain.com)"
+#USER_AGENT = "ecommerce_scraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -41,13 +41,13 @@ DOWNLOAD_DELAY = 1
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "demo21_scrapy.middlewares.Demo21ScrapySpiderMiddleware": 543,
+#    "ecommerce_scraper.middlewares.EcommerceScraperSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "demo21_scrapy.middlewares.Demo21ScrapyDownloaderMiddleware": 543,
+#    "ecommerce_scraper.middlewares.EcommerceScraperDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -59,7 +59,7 @@ DOWNLOAD_DELAY = 1
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "demo21_scrapy.pipelines.Demo21ScrapyPipeline": 300,
+#    "ecommerce_scraper.pipelines.EcommerceScraperPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
