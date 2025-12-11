@@ -97,6 +97,7 @@ FEEDS = {
         'format': 'csv',
         'encoding': 'utf8',
         'store_empty': False,
+        'fields' : ['title', 'price', 'rating', 'availability']
     },
 
 }
