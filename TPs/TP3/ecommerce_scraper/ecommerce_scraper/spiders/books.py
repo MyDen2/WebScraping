@@ -10,7 +10,7 @@ class BookLoader(ItemLoader):
     default_output_processor = TakeFirst()
 
     # price_out = 
-    
+
 
     #text_in = MapCompose(clean_text)
 
@@ -20,8 +20,9 @@ class BooksSpider(scrapy.Spider):
     start_urls = ["https://books.toscrape.com"]
 
     def parse(self, response):
-
-        for book in response.css('article.product_pod'):
+        books = response.css('article.product_pod')
+        #if books : 
+        for book in books:
             loader = BookLoader(item=BookItem(),response=response,selector=book)
             loader.add_css("title", "a::attr(title)")
             loader.add_css("price", "p.price_color::text")
@@ -35,6 +36,7 @@ class BooksSpider(scrapy.Spider):
             yield item
 
             # Suivre le lien "Next"
+        # else : 
         next_page = response.css('h3 a::attr(href)').get()
         if next_page:
             loader.add_css("description", "p::text")
